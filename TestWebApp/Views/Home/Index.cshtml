@@ -1,0 +1,21 @@
+﻿@{
+    ViewData["Title"] = "Home Page";
+}
+
+<div class="text-center">
+    <input id="fromDate" type="date"/>
+    <input id="toDate" type="date"/>
+    <button onclick="getAthleteTrainingSessions('BTSWE22406199301')">Ok</button>
+    <button onclick="getTrainingSessionOnDate('2022-02-09')">Get TS</button>
+</div>
+@{
+    for (int i = 1; i < 32; i++)
+    {
+        <div id="@i.ToString("D2")" class="day">
+            <h1>@i</h1>
+            <h3 class="seriesCount"></h3>
+        </div>
+    }
+}
+
+<script src="js/Datethingy.js"></script>
